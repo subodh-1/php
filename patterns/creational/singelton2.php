@@ -22,12 +22,12 @@ class Singleton {
     }
 
     public function showMessage($msg) {
-        echo "Hello, I am a Singleton!". $msg;
+        echo "Hello, I am a Singleton! ". $msg;
     }
 }
 
 // Usage
 $instance = Singleton::getInstance();
-$instance->showMessage("Subodh");
+$instance->showMessage("Hi, there");
 
 
