@@ -24,8 +24,37 @@
     public function add($part){
         $this->parts[] = $part;
     }
+    public function show_status() {
+        echo "Computer build status: ". implode(',', $this->parts);
+    }
  }
 
  class ComputerBuilder {
-    
+    private $computer;
+    public function __construct(){
+        $this->computer = new Computer();
+    }
+    public function cpu_build(){
+        $this->computer->add('CPU');
+    }
+    public function motherboard_build(){
+        $this->computer->add('MOTHERBOARD');
+    }
+    public function monitor_build(){
+        $this->computer->add('MONITOR');
+    }
+    public function networking_build(){
+        $this->computer->add('NETWORK');
+    }
+    public function show_progress(){
+        $this->computer->show_status();
+    }
  }
+
+ $computer = new ComputerBuilder();
+ $computer->cpu_build();
+ $computer->monitor_build();
+ $computer->motherboard_build();
+ $computer->networking_build();
+ $computer->show_progress();
+ 
