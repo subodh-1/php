@@ -25,7 +25,7 @@
  */
 
  interface Observer {
-    public function update($data);
+    public function update($data) : void;
  }
 
  class ConcreteObserver implements Observer {
@@ -33,7 +33,7 @@
     public function __construct($name) {
         $this->name = $name;
     }
-    public function update($data) {
+    public function update($data) : void {
         echo PHP_EOL;
         echo "Observer: {$this->name} receives data => ". $data;
     }
