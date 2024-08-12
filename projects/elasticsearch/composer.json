@@ -1,0 +1,23 @@
+{
+    "name": "projects/elasticsearch",
+    "description": "This package is for creating a simple php elasticsearch interface",
+    "autoload": {
+        "psr-4": {
+            "Projects\\Elasticsearch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "subodh-1",
+            "email": "choure.subodh@gmail.com"
+        }
+    ],
+    "require": {
+        "elasticsearch/elasticsearch": "^8.14"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
