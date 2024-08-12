@@ -1,7 +1,7 @@
 <?php
 require 'elastic.php';
 ?>
- <?php
+<?php
     if (isset($_POST['ajax']) && $_POST['ajax'] == '1') {
         header('Content-Type: application/json');
 
@@ -34,11 +34,9 @@ require 'elastic.php';
                 ];
             }
 
-            echo json_encode($results);
-            exit;
+            echo json_encode($results); exit;
         } catch (Exception $e) {
-            echo json_encode(['error' => $e->getMessage()]);
-            exit;
+            echo json_encode(['error' => $e->getMessage()]); exit;
         }
 
         exit;
@@ -92,7 +90,6 @@ require 'elastic.php';
             xhr.send('query=' + encodeURIComponent(query) + '&ajax=1');
         });
     </script>
-
-   
+    
 </body>
 </html>
