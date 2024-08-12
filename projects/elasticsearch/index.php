@@ -12,10 +12,9 @@ require 'elastic.php';
 <body>
     <h1>Elasticsearch Operations</h1>
     <ul>
-        <li><a href="insert.php">Insert Data</a> - Insert data into MySQL</li>
-        <li><a href="fetch.php">Fetch Data</a> - Fetch data from MySQL</li>
         <li><a href="index.php">Index Data</a> - Index data into Elasticsearch</li>
         <li><a href="search.php">Search Data</a> - Search data in Elasticsearch</li>
+        <li><a href="view.php">View Data</a> - List all data in Elasticsearch</li>
     </ul>
 
     <h2>Index Document</h2>
